@@ -5,7 +5,6 @@ const middlewares = require("../middlewares");
 const router = Router();
 
 router.get("/", controllers.getPlanets);
-// router.post("/", controllers.createPlanet);
-router.post("/", middlewares.filmValidation, controllers.createPlanet);
+router.post("/", middlewares.planetValidation, controllers.createPlanet);
 
 module.exports = router;
